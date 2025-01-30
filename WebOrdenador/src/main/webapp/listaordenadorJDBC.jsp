@@ -48,7 +48,7 @@
 				<tr>
 					<th><a href="?orden=marca"> Marca</a></th>
 					<th><a href="?orden=precio">Precio</a></th>
-					<th>Borrar</th>
+					
 				</tr>
 			</thead>
 
@@ -59,8 +59,7 @@
 			<tr>
 				<td><%=o.getMarca()%></td>
 				<td><%=o.getPrecio()%></td>
-				<td><a class="btn btn-secondary"
-					href="?comando=borrarordenador&marca=<%=o.getMarca()%>"> Borrar</a></td>
+				
 			</tr>
 			<%
 			}

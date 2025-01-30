@@ -59,19 +59,7 @@ public class OrdenadorServlet extends HttpServlet {
 				RequestDispatcher despachador = request.getRequestDispatcher("listaordenadorJDBC.jsp");
 				despachador.forward(request, response);
 
-			} else if (comando.equals("borrarordenador")) {
-
-				String marca = request.getParameter("marca");
-
-				Ordenador o = new Ordenador(marca);
-				OrdenadorRepository repo = new OrdenadorRepositoryJDBC();
-				repo.borrar(o);
-				lista = repo.buscarTodos();
-
-				request.setAttribute("lista", lista);
-				RequestDispatcher despachador = request.getRequestDispatcher("listaordenadorJDBC.jsp");
-				despachador.forward(request, response);
-			}
+			} 
 
 	}
 

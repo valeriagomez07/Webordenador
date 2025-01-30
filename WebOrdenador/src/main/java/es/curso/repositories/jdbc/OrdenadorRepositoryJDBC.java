@@ -62,23 +62,7 @@ public class OrdenadorRepositoryJDBC implements OrdenadorRepository{
 		}
 
 	}
-	@Override
-	public void borrar(Ordenador ordenador) {
-		Connection conexion = null;
-		Statement sentencia = null;
-		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			conexion = DriverManager.getConnection(DB_URL, USER, PASS);
-			sentencia = conexion.createStatement();
-			String borrarsql = "delete from ordenadores where marca='" + ordenador.getMarca() + "'";
-			sentencia.executeUpdate(borrarsql);
-
-		} catch (ClassNotFoundException | SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-	}
+	
 	@Override
 	public List<Ordenador> buscarTodosOrdenados(String orden) {
 		Connection conexion = null;
