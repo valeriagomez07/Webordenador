@@ -89,7 +89,7 @@ public class OrdenadorRepositoryJDBC implements OrdenadorRepository{
 			Class.forName("com.mysql.jdbc.Driver");
 			conexion = DriverManager.getConnection(DB_URL, USER, PASS);
 			sentencia = conexion.createStatement();
-			rs = sentencia.executeQuery("select * from libro order by " + orden);
+			rs = sentencia.executeQuery("select * from ordenadores order by " + orden);
 			while (rs.next()) {
 				Ordenador o = new Ordenador(rs.getString("marca"), rs.getInt("precio"));
 				lista.add(o);

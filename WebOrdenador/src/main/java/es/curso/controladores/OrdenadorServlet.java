@@ -69,7 +69,7 @@ public class OrdenadorServlet extends HttpServlet {
 				lista = repo.buscarTodos();
 
 				request.setAttribute("lista", lista);
-				RequestDispatcher despachador = request.getRequestDispatcher("listalibroJDBC.jsp");
+				RequestDispatcher despachador = request.getRequestDispatcher("listaordenadorJDBC.jsp");
 				despachador.forward(request, response);
 			}
 

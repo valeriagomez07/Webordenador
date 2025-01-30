@@ -54,13 +54,13 @@
 
 
 			<%
-			for (Ordenador e : lista) {
+			for (Ordenador o : lista) {
 			%>
 			<tr>
-				<td><%=e.getMarca()%></td>
-				<td><%=e.getPrecio()%></td>
+				<td><%=o.getMarca()%></td>
+				<td><%=o.getPrecio()%></td>
 				<td><a class="btn btn-secondary"
-					href="?comando=borrarordenador&id=<%=e.getMarca()%>"> Borrar</a></td>
+					href="?comando=borrarordenador&marca=<%=o.getMarca()%>"> Borrar</a></td>
 			</tr>
 			<%
 			}
